@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="hexagon_142">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual_top">
+        <pose> 0 0 -0.008 0 0 0 </pose>
+        <geometry>
+          <mesh>
+            <scale> 0.01 0.01 0.0000625</scale>          
+            <uri>model://hexagon_142/meshes/hexagon_142.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Red</name>
+          </script>
+          
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+      </visual>
+    </link>
+
+
+    <link name="point0">
+      <pose relative_to="link">
+        0.35859 0 0 0 0 0
+      </pose>
+    </link>
+
+    <link name="point1">
+      <pose relative_to="link">
+        1.0686 0.004158 0 0 0 0
+      </pose>
+    </link>
+
+
+    <link name="point2">
+      <pose relative_to="link">
+        1.42 0.6211 0 0 0 0
+      </pose>
+    </link>
+
+    <link name="point3">
+      <pose relative_to="link">
+        1.0614 1.2339 0 0 0 0
+      </pose>
+    </link>
+
+    <link name="point4">
+      <pose relative_to="link">
+        0.35139 1.2297 0 0 0 0
+      </pose>
+    </link>
+
+    <link name="point5">
+      <pose relative_to="link">
+        0 0.61279 0 0 0 0
+      </pose>
+    </link>
+  </model>
+</sdf>
+
+

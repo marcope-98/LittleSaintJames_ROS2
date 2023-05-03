@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sdf version="1.4">
+  <model name="mindstorm_map">
+
+    <!-- Gate and camera section -->
+    <include>
+      <uri>model://gate</uri>
+      <pose>13 10 0 0 0 1.57</pose>
+      <name>gate</name>
+    </include>
+
+    <!-- Victim section -->
+    
+
+    <!-- Obstacle section -->    
+    <include>
+      <uri>model://hexagon_95</uri>
+      <pose>0.4 4.5 0 0 0 0</pose>
+      <name>obstacle_1</name>
+    </include>
+
+    <include>
+      <uri>model://pentagon_95</uri>
+      <pose>0.4 6 0 0 0 0</pose>
+      <name>obstacle_2</name>
+    </include>
+
+    <include>
+      <uri>model://rectangle_95</uri>
+      <pose>1.7 4.5 0 0 0 0</pose>
+      <name>obstacle_3</name>
+    </include>
+
+    <include>
+      <uri>model://triangle_95</uri>
+      <pose>1.7 6 0 0 0 0</pose>
+      <name>obstacle_4</name>
+    </include>
+
+
+
+    <include>
+      <uri>model://hexagon_142</uri>
+      <pose>3 4.5 0 0 0 0</pose>
+      <name>obstacle_5</name>
+    </include>
+
+    <include>
+      <uri>model://pentagon_142</uri>
+      <pose>3 6 0 0 0 0</pose>
+      <name>obstacle_6</name>
+    </include>
+
+    <include>
+      <uri>model://rectangle_142</uri>
+      <pose>5 4.5 0 0 0 0</pose>
+      <name>obstacle_7</name>
+    </include>
+
+    <include>
+      <uri>model://triangle_142</uri>
+      <pose>5 6 0 0 0 0</pose>
+      <name>obstacle_8</name>
+    </include>
+
+
+
+    <include>
+      <uri>model://hexagon_189</uri>
+      <pose>9 4.5 0 0 0 0</pose>
+      <name>obstacle_9</name>
+    </include>
+
+    <include>
+      <uri>model://pentagon_189</uri>
+      <pose>9 6.5 0 0 0 0</pose>
+      <name>obstacle_10</name>
+    </include>
+
+    <include>
+      <uri>model://rectangle_189</uri>
+      <pose>7 4.5 0 0 0 0</pose>
+      <name>obstacle_11</name>
+    </include>
+
+    <include>
+      <uri>model://triangle_189</uri>
+      <pose>7 6.5 0 0 0 0</pose>
+      <name>obstacle_12</name>
+    </include>   
+
+    <!-- ################################### -->
+    <!-- #####!!!!DO NOT CHANGE THIS!!!##### -->
+    <!-- ################################### -->
+    <!-- FIXED PART OF THE ARENA -->
+    <include>
+      <uri> model://long_black_stripe</uri>
+      <pose> 7.8 0.0 0 0 -0 0 </pose>
+      <name>long_stripe_down</name>
+    </include>  
+  
+    <include>
+      <uri> model://long_black_stripe</uri>
+      <pose> 7.8 10.6 0 0 -0 0 </pose>
+      <name>long_stripe_up</name>
+    </include> 
+
+    <include>
+      <uri> model://short_black_stripe</uri>
+      <pose> 0.0 5.3 0 0 0 1.5707963268 </pose>
+      <name>short_stripe_left</name>
+    </include>  
+
+    <include>
+      <uri> model://short_black_stripe</uri>
+      <pose> 15.6 5.3 0 0 0 1.5707963268 </pose>
+      <name>short_stripe_right</name>
+    </include>
+
+    <include>
+      <uri> model://short_red_stripe</uri>
+      <pose> 2 -1 0 0 0 0 </pose>
+      <name>short_red_stripe</name>
+    </include>
+
+    <include>
+      <uri> model://arena_ground</uri>
+      <pose> 7.5 5 -0.05 0 -0 0 </pose>
+      <name>arena_ground</name>
+    </include>
+
+  </model>      
+</sdf>

@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="pentagon_189">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual_top">
+        <pose> 0 0 -0.008 0 0 0 </pose>
+        <geometry>
+          <mesh>
+            <scale> 0.01 0.01 0.0000625</scale>          
+            <uri>model://pentagon_189/meshes/pentagon_95.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <lighting>1</lighting>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Red</name>
+          </script>
+          
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+      </visual>
+    </link>
+
+    <link name="point0">
+      <pose relative_to="link">
+        0.17255 0 0 0 0 0
+      </pose>
+    </link>
+
+    <link name="point1">
+      <pose relative_to="link">
+        0.73095 0 0 0 0 0
+      </pose>
+    </link>
+
+    <link name="point2">
+      <pose relative_to="link">
+        0.9035 0.53107 0 0 0 0
+      </pose>
+    </link>
+
+    <link name="point3">
+      <pose relative_to="link">
+        0.45175 0.85928 0 0 0 0
+      </pose>
+    </link>
+
+    <link name="point4">
+      <pose relative_to="link">
+        0 0.53107 0 0 0 0
+      </pose>
+    </link>
+  </model>
+</sdf>
+
+
