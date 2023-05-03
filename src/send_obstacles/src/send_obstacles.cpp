@@ -1,7 +1,9 @@
 // stl
+#include <chrono>
 #include <cstdint>
 #include <functional>
 #include <string>
+#include <unistd.h>
 #include <vector>
 // rclcpp and gazebo
 #include "rclcpp/rclcpp.hpp"
@@ -12,6 +14,7 @@
 #include "geometry_msgs/msg/pose.hpp"
 #include "obstacles_msgs/msg/obstacle_array_msg.hpp"
 #include "obstacles_msgs/msg/obstacle_msg.hpp"
+#include "std_msgs/msg/header.hpp"
 
 using std::placeholders::_1;
 
@@ -33,6 +36,7 @@ private:
     std::string obs_pattern("mindstorm_map::obstacle_");
     std::string link_pattern("::link");
 
+    std_msgs::msg::Header                 hh;
     geometry_msgs::msg::Point32           point;
     geometry_msgs::msg::Polygon           pol;
     obstacles_msgs::msg::ObstacleMsg      obs_msg;
@@ -41,7 +45,9 @@ private:
     std::vector<geometry_msgs::msg::Point32>      points;
     std::vector<obstacles_msgs::msg::ObstacleMsg> obstacles;
 
-    point.z = 0;
+    hh.stamp    = this->now();
+    hh.frame_id = "map";
+    point.z     = 0;
 
     // WARN: this is really hard to read.
     for (std::size_t i = 0; i < msg->name.size(); ++i)
@@ -74,7 +80,7 @@ private:
       obstacles.emplace_back(obs_msg);
       points.clear();
     }
-
+    obs_arr_msg.header    = hh;
     obs_arr_msg.obstacles = obstacles;
 
     while (1)

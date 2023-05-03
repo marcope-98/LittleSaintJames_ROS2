@@ -104,58 +104,52 @@ def generate_launch_description():
             launch_arguments={'use_sim_time': use_sim_time,
                               'robot_id': robot_0}.items()
         ),
-
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([launch_file_dir, '/robot_state_publisher.launch.py']),
             condition=IfCondition(PythonExpression([n ,'>=2'])),
             launch_arguments={'use_sim_time': use_sim_time,
                               'robot_id': robot_1}.items()
         ),
-
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([launch_file_dir, '/robot_state_publisher.launch.py']),
             condition=IfCondition(PythonExpression([n ,'>=3'])),
             launch_arguments={'use_sim_time': use_sim_time,
                               'robot_id': robot_2}.items()
         ),
-        #Node(
-        #    package='get_positions',
-        #    executable='get_positions',
-        #    condition=IfCondition(PythonExpression([n ,'>=1'])),
-        #    namespace=robot_0,
-        #    remappings=[
-        #    ('/tf', 'tf')],
-        #    ),
-        #Node(
-        #    package='get_positions',
-        #    executable='get_positions',
-        #    condition=IfCondition(PythonExpression([n ,'>=2'])),
-        #    namespace=robot_1,
-        #    remappings=[
-        #    ('/tf', 'tf')],
-        #    ),
-        #Node(
-        #    package='get_positions',
-        #    executable='get_positions',
-        #    condition=IfCondition(PythonExpression([n ,'>=3'])),
-        #    namespace=robot_2,
-        #    remappings=[
-        #    ('/tf', 'tf')],
-        #    ),
-        #Node(
-        #    package='fetch_link_states',
-        #    executable='fetch_link_states'
-        #),
-        #Node(
-        #    package='send_obstacles',
-        #    executable='send_obstacles'
-        #),
-        #Node(
-        #    package='send_borders',
-        #    executable='send_borders'
-        #),
-        #Node(
-        #    package='send_gates',
-        #    executable='send_gates'
-        #),
+        Node(
+            package='get_positions',
+            executable='get_positions',
+            condition=IfCondition(PythonExpression([n ,'>=1'])),
+            namespace=robot_0,
+            remappings=[
+            ('/tf', 'tf')],
+            ),
+        Node(
+            package='get_positions',
+            executable='get_positions',
+            condition=IfCondition(PythonExpression([n ,'>=2'])),
+            namespace=robot_1,
+            remappings=[
+            ('/tf', 'tf')],
+            ),
+        Node(
+            package='get_positions',
+            executable='get_positions',
+            condition=IfCondition(PythonExpression([n ,'>=3'])),
+            namespace=robot_2,
+            remappings=[
+            ('/tf', 'tf')],
+            ),
+        Node(
+            package='send_obstacles',
+            executable='send_obstacles'
+        ),
+        Node(
+            package='send_borders',
+            executable='send_borders'
+        ),
+        Node(
+            package='send_gates',
+            executable='send_gates'
+        ),
     ])
