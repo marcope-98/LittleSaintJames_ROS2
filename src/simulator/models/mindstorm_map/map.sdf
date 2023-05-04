@@ -2,13 +2,23 @@
 <sdf version="1.4">
  <model name="mindstorm_map">
   <include>
-   <uri>model://rectangle_95</uri>
-   <pose> 0.71613 9.72824 0 0 0 -0.00000 </pose>
+   <uri>model://triangle_142</uri>
+   <pose> 11.39355 3.83500 0 0 0 -0.00000 </pose>
    <name>obstacle_1</name>
   </include>
   <include>
+   <uri>model://rectangle_189</uri>
+   <pose> 3.94194 6.96679 0 0 0 -0.00000 </pose>
+   <name>obstacle_2</name>
+  </include>
+  <include>
+   <uri>model://pentagon_142</uri>
+   <pose> 2.50645 3.00270 0 0 0 -0.00000 </pose>
+   <name>obstacle_3</name>
+  </include>
+  <include>
    <uri>model://gate</uri>
-   <pose> 0.70000 9.40000 0 0 0 0.00000 </pose>
+   <pose> 0.70000 5.91613 0 0 0 3.14159 </pose>
    <name>gate</name>
   </include>
   <include>
